@@ -1,0 +1,56 @@
+site:
+	name: 'Anime News Network'
+	api:
+		xml_element:
+			animation_type: 
+			cast:
+				element: 'cast'
+				child:
+					element: 'person'
+					
+			creator: null
+			director: null
+			ending: 
+				element: 'info'
+				property: 'type'
+				value: 'Ending Theme'
+
+			genre:
+				element: 'info'
+				property: 'type'
+				value: 'Genres'
+
+			image:
+				element: 'info'
+				property: 'type'
+				value: 'Picture'
+				inplace: 'src'
+
+			number_of_episodes: 
+				element: 'info'
+				property: 'type'
+				value: 'Number of episodes'
+
+			opening: 
+				element: 'info'
+				property: 'type'
+				value: 'Opening Theme'
+
+			origin: null
+			photograph_director: null
+			studio: null
+			title: 
+				element: 'info'
+				property: 'type'
+				value: 'Main title'
+			theme:
+				element: 'info'
+				property: 'type'
+				value: 'Themes'
+			year:
+				element: 'info'
+				property: 'type'
+				value: 'Vintage'
+				
+		api_url: "http://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime="
+		
