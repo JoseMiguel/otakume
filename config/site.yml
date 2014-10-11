@@ -1,56 +1,57 @@
 site:
-	name: 'Anime News Network'
-	api:
-		xml_element:
-			animation_type: 
-			cast:
-				element: 'cast'
-				child:
-					element: 'person'
-					
-			creator: null
-			director: null
-			ending: 
-				element: 'info'
-				property: 'type'
-				value: 'Ending Theme'
+ id: 1
+ name: 'Anime News Network'
+ api_url: "http://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime="
+ header: 'ann'
+ xml_element:
+   animation_type: 
+   cast:
+    tag: 'cast'
+    property: null
+    value: null
+     
+   creator: null
+   director: null
+   ending: 
+    tag: 'info'
+    property: 'type'
+    value: 'Ending Theme'
 
-			genre:
-				element: 'info'
-				property: 'type'
-				value: 'Genres'
+   genre:
+    tag: 'info'
+    property: 'type'
+    value: 'Genres'
 
-			image:
-				element: 'info'
-				property: 'type'
-				value: 'Picture'
-				inplace: 'src'
+   image:
+    tag: 'info'
+    property: 'type'
+    value: 'Picture'
+    inplace: 'src'
 
-			number_of_episodes: 
-				element: 'info'
-				property: 'type'
-				value: 'Number of episodes'
+   number_of_episodes: 
+    tag: 'info'
+    property: 'type'
+    value: 'Number of episodes'
 
-			opening: 
-				element: 'info'
-				property: 'type'
-				value: 'Opening Theme'
+   opening: 
+    tag: 'info'
+    property: 'type'
+    value: 'Opening Theme'
 
-			origin: null
-			photograph_director: null
-			studio: null
-			title: 
-				element: 'info'
-				property: 'type'
-				value: 'Main title'
-			theme:
-				element: 'info'
-				property: 'type'
-				value: 'Themes'
-			year:
-				element: 'info'
-				property: 'type'
-				value: 'Vintage'
-				
-		api_url: "http://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime="
-		
+   origin: null
+   photograph_director: null
+   studio: null
+   title: 
+    tag: 'info'
+    property: 'type'
+    value: 'Main title'
+   theme:
+    tag: 'info'
+    property: 'type'
+    value: 'Themes'
+   year:
+    tag: 'info'
+    property: 'type'
+    value: 'Vintage'
+    
+  
