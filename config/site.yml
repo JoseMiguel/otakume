@@ -1,57 +1,58 @@
-site:
- id: 1
- name: 'Anime News Network'
- api_url: "http://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime="
- header: 'ann'
- xml_element:
-   animation_type: 
-   cast:
-    tag: 'cast'
-    property: null
-    value: null
+sites:
+- id: 1
+  name: 'Anime News Network'
+  api_url: "http://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime"
+  format: "%s=%d"
+  header: 'ann'
+  xml_element:
+    animation_type: 
+    cast:
+     tag: 'cast'
+     property: null
+     value: null
      
-   creator: null
-   director: null
-   ending: 
-    tag: 'info'
-    property: 'type'
-    value: 'Ending Theme'
+    creator: null
+    director: null
+    ending: 
+     tag: 'info'
+     property: 'type'
+     value: 'Ending Theme'
 
-   genre:
-    tag: 'info'
-    property: 'type'
-    value: 'Genres'
+    genre:
+     tag: 'info'
+     property: 'type'
+     value: 'Genres'
 
-   image:
-    tag: 'info'
-    property: 'type'
-    value: 'Picture'
-    inplace: 'src'
+    image:
+     tag: 'info'
+     property: 'type'
+     value: 'Picture'
+     inplace: 'src'
 
-   number_of_episodes: 
-    tag: 'info'
-    property: 'type'
-    value: 'Number of episodes'
+    number_of_episodes: 
+     tag: 'info'
+     property: 'type'
+     value: 'Number of episodes'
 
-   opening: 
-    tag: 'info'
-    property: 'type'
-    value: 'Opening Theme'
+    opening: 
+     tag: 'info'
+     property: 'type'
+     value: 'Opening Theme'
 
-   origin: null
-   photograph_director: null
-   studio: null
-   title: 
-    tag: 'info'
-    property: 'type'
-    value: 'Main title'
-   theme:
-    tag: 'info'
-    property: 'type'
-    value: 'Themes'
-   year:
-    tag: 'info'
-    property: 'type'
-    value: 'Vintage'
-    
-  
+    origin: null
+    photograph_director: null
+    studio: null
+    title: 
+     tag: 'info'
+     property: 'type'
+     value: 'Main title'
+    theme:
+     tag: 'info'
+     property: 'type'
+     value: 'Themes'
+    year:
+     tag: 'info'
+     property: 'type'
+     value: 'Vintage'
+
+- id: 2

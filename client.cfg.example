@@ -1,3 +1,9 @@
-[config]
-//absolute path of site.yml
-sites = /home/jmj/otakume/config/site.yml
+[sources]
+sites = /home/xxx/otakume/config/site.yml
+
+[persistance]
+orchestrate = /home/xxx/otakume/config/orchestrate.yml
+mysql = /home/xxx/otakume/config/mysql_conf.sql
+
+[logs]
+crawler = /home/jmj/otakume/log/crawler.log
