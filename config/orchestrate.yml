@@ -1,9 +1,0 @@
-config:
- api_key: "83b719ae-d650-4001-9b77-2c29e2ecbd8c"
-collections:
- - id: 1
-   name: "Anime News Network"
-   info: "the key of this collection is the same id of ann"
- - id: 2
-   name: 'Anime News Network Reviews'
-   info: 'the key of this collection season + year'
