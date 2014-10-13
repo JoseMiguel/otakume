@@ -54,5 +54,36 @@ sites:
      tag: 'info'
      property: 'type'
      value: 'Vintage'
-
 - id: 2
+  name: 'Anime News Network Reviews'
+  base_url: 'http://www.animenewsnetwork.com'
+  #change api_url, year and season every anime-season
+  api_url: 'http://www.animenewsnetwork.com/preview-guide/2014/fall/.79245'
+  year: '2014'
+  season: 'fall'
+  format: '%s%s'
+  xml_element:
+    table:
+     tag: 'table'
+     property: null
+     value: null
+    animes:
+     tag: 'td'
+     property: null
+     value: null
+    name:
+     tag: 'b'
+     property: null
+     value: null
+    review_url:
+     tag: 'a'
+     property: 'href'
+     value: True
+     inplace: 'href'
+    rating:
+     tag: 'p'
+     content: 'Rating'
+     length: 50
+     property: null
+     value: null
+
