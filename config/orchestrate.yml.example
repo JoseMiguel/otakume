@@ -1,7 +1,9 @@
 config:
- api_key: API_KEY
+ api_key: "***REMOVED***"
 collections:
- collection:
-  id: 1
-  name: "Anime News Network"
-  info: "the key of this collection is the same id of ann"
+ - id: 1
+   name: "Anime News Network"
+   info: "the key of this collection is the same id of ann"
+ - id: 2
+   name: 'Anime News Network Reviews'
+   info: 'the key of this collection season + year'
