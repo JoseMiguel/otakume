@@ -1,5 +1,5 @@
 config:
- api_key: "***REMOVED***"
+ api_key: API_KEY
 collections:
  - id: 1
    name: "Anime News Network"
