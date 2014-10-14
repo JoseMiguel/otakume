@@ -1,5 +1,5 @@
 config:
- api_key: "83b719ae-d650-4001-9b77-2c29e2ecbd8c"
+ api_key: API_KEY
 collections:
  - id: 1
    name: "Anime News Network"
