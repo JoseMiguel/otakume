@@ -4,41 +4,36 @@ sites:
   api_url: "http://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime"
   format: "%s=%d"
   header: 'ann'
+  features: ['genre','theme', 'number_of_episodes', 'year']
   xml_element:
     animation_type: 
     cast:
      tag: 'cast'
      property: null
      value: null
-     
     creator: null
     director: null
     ending: 
      tag: 'info'
      property: 'type'
      value: 'Ending Theme'
-
     genre:
      tag: 'info'
      property: 'type'
      value: 'Genres'
-
     image:
      tag: 'info'
      property: 'type'
      value: 'Picture'
      inplace: 'src'
-
     number_of_episodes: 
      tag: 'info'
      property: 'type'
      value: 'Number of episodes'
-
     opening: 
      tag: 'info'
      property: 'type'
      value: 'Opening Theme'
-
     origin: null
     photograph_director: null
     studio: null
