@@ -48,8 +48,10 @@ class OrchestrateTask(BaseTask):
 		pass
 
 	def get(self):
-		pass
-	
+		client = Client(self.api_key)
+		return client.get(self.collection, self.key)
+
+	#set collection, key and json
 	def put(self):
 		client = Client(self.api_key)
 		result = client.put(self.collection,
