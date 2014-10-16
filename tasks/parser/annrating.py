@@ -88,8 +88,9 @@ class ANNRatingTask(SiteTask):
 		return result
 	
 def main():
-	ann = ANNRatingOrchestrate()
-	ann.run()
+#	ann = ANNRatingOrchestrate()
+#	ann.run()
+	pass
 
 if __name__ == '__main__':
 	main()

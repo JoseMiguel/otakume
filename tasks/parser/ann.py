@@ -75,8 +75,9 @@ class ANNTask(SiteTask):
 		return result
 	
 def main():
-	orchestrate = ANNOrchestrate(1,16500)
-	orchestrate.run()
+	pass
+#	orchestrate = ANNOrchestrate(5740,16500)
+#	orchestrate.run()
 	
 
 if __name__ == '__main__':
