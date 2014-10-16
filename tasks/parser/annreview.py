@@ -65,7 +65,7 @@ class ANNReviewTask(SiteTask):
 	def crawl(self, xml, elements):
 		result = defaultdict(list)
 		if xml != None:
-			logging.info('Getting anime info from %s with key %d', self.source, self.key)
+			logging.info('Getting anime info from %s with key %s', self.source, self.key)
 			soupXML = BeautifulSoup(xml)
 			soupTable = self.retrieve(soupXML, self.elements['table'])[0]
 		
@@ -99,7 +99,7 @@ class ANNReviewTask(SiteTask):
 					if rating_value > 0:
 						ratings.append(rating_value)
 
-				reviewDict['name'] = str(name.replace('\n', ' '))
+				reviewDict['item'] = str(name.replace('\n', ' '))
 				reviewDict['mean'] = np.mean(ratings)
 				reviewDict['st-dev'] = 2 * np.std(ratings)
 				result['reviews'].append(reviewDict)
