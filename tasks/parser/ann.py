@@ -56,6 +56,7 @@ class ANNTask(SiteTask):
 			
 		logging.info('Getting anime info from %s with key %d', self.source, self.key)
 		soupXML = BeautifulSoup(xml)
+
 		for feature, element in self.elements.iteritems():
 		
 			if element != None:
@@ -65,14 +66,19 @@ class ANNTask(SiteTask):
 					if 'inplace' in element:
 						text = featureXML[element['inplace']]
 					else:
+						if 'more' in element:
+							featureXML = self.retrieve(featureXML, element['more'])[0]
+						
 						text = featureXML.text
 					result[feature].append(text)
 
 		return result
 	
 def main():
-	orchestrate = ANNOrchestrate(14000,16500)
-	orchestrate.run()
+	pass
+#	orchestrate = ANNOrchestrate(5740,16500)
+#	orchestrate.run()
+	
 
 if __name__ == '__main__':
 	main()

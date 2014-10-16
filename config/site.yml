@@ -9,8 +9,12 @@ sites:
     animation_type: 
     cast:
      tag: 'cast'
-     property: null
-     value: null
+     property: 'lang'
+     value: 'JA'
+     more:
+      tag: 'person'
+      property: null
+      value: null
     creator: null
     director: null
     ending: 

@@ -110,8 +110,9 @@ class ANNReviewTask(SiteTask):
 		return result
 	
 def main():
-	ann = ANNReviewOrchestrate()
-	ann.run()
+	pass
+#	ann = ANNReviewOrchestrate()
+#	ann.run()
 
 if __name__ == '__main__':
 	main()
