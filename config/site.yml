@@ -4,7 +4,7 @@ sites:
   api_url: "http://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime"
   format: "%s=%d"
   header: 'ann'
-  features: ['genre','theme', 'number_of_episodes', 'year']
+  features: ['genre','theme', 'director', 'cast']
   xml_element:
     animation_type: 
     cast:
