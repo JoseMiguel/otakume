@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import time
 import numpy as np
 import logging
 from collections import defaultdict
@@ -10,7 +11,7 @@ class ANNRatingOrchestrate(OrchestrateTask):
 
 	@property
 	def id(self):
-		return 1
+		return 3
 
 	def __init__(self):
 	
@@ -23,11 +24,15 @@ class ANNRatingOrchestrate(OrchestrateTask):
 		task = ANNRatingTask()
 		self.json = task.run()
 		for key, info in self.json.iteritems():
+			
 			self.key = key
 			item = self.get()
-			for infoKey, infoValue in info.iteritems():
-				item[infoKey] = infoValue
-			self.json = item.json
+			if item.response.status_code == 404:
+				self.json = info
+			else:				
+				item.json['rating'].extend(info['rating'])
+				self.json = item.json
+			
 			self.put()
 
 class ANNRatingTask(SiteTask):
@@ -83,7 +88,15 @@ class ANNRatingTask(SiteTask):
 						animeUrl = urlSoup[0][element['inplace']]
 						animeId = animeUrl[animeUrl.rfind('=')+1:]
 						rating, votes = map(lambda r: float(r.text), rankSoup)
-						result[animeId] = {'rating': rating, 'votes': votes}
+						result[animeId] = { 
+							'rating': [
+										{
+											'score': rating, 
+											'votes': int(votes), 
+											'timestamp': int(time.time()) 
+										}
+									] 
+							}
 
 		return result
 	

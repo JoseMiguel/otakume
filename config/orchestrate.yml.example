@@ -7,3 +7,6 @@ collections:
  - id: 2
    name: 'Anime News Network Reviews'
    info: 'the key of this collection season + year'
+ - id: 3
+   name: "Anime News Ratings"
+   info: "the key of this collection is the same id of ann"

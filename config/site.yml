@@ -87,7 +87,7 @@ sites:
      value: null
 - id: 3
   name: 'Anime News Network'
-  api_url: 'http://www.animenewsnetwork.com/encyclopedia/ratings-anime.php?top10=best_bayesian&n=2500'
+  api_url: 'http://www.animenewsnetwork.com/encyclopedia/ratings-anime.php?top10=best_bayesian&n=10'
   xml_element:
     content:
      tag: 'table'
