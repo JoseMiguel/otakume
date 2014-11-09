@@ -22,8 +22,18 @@ class ANNReviewOrchestrate(OrchestrateTask):
 	def run(self):
 		task = ANNReviewTask()
 		self.key = task.key
-		self.json = task.run()
-		print self.json
+
+		reviews = self.get()
+		updateReviews = task.run()
+		# since there are about 20 reviews per season
+		for i, updateReview in enumerate(updateReviews['reviews']):
+			print updateReview
+			for review in reviews['reviews']:
+				if review['title'] == updateReview['title']:
+					updateReviews['reviews'][i]['id'] = review['id']
+					break
+			
+		self.json = updateReviews
 		self.put()
 
 
@@ -49,7 +59,7 @@ class ANNReviewTask(SiteTask):
 
 	def prepare_url(self,url):
 		try:
-			xml = urllib2.urlopen(url)
+			xml = urllib2.urlopen(url, timeout=30)
 		except Exception as e:
 			logging.warning('Failed info in % with key %d, raise: ', self.source, self.key, e.message)
 			return None
@@ -64,6 +74,7 @@ class ANNReviewTask(SiteTask):
 
 	def crawl(self, xml, elements):
 		result = defaultdict(list)
+		print 'x'
 		if xml != None:
 			logging.info('Getting anime info from %s with key %s', self.source, self.key)
 			soupXML = BeautifulSoup(xml)
@@ -99,7 +110,7 @@ class ANNReviewTask(SiteTask):
 					if rating_value > 0:
 						ratings.append(rating_value)
 
-				reviewDict['item'] = str(name.replace('\n', ' '))
+				reviewDict['title'] = str(name.replace('\n', ' '))
 				reviewDict['mean'] = np.mean(ratings)
 				reviewDict['st-dev'] = 2 * np.std(ratings)
 				result['reviews'].append(reviewDict)
@@ -110,9 +121,10 @@ class ANNReviewTask(SiteTask):
 		return result
 	
 def main():
-	pass
-#	ann = ANNReviewOrchestrate()
-#	ann.run()
+#	pass
+	print 'y'
+	ann = ANNReviewOrchestrate()
+	ann.run()
 
 if __name__ == '__main__':
 	main()
