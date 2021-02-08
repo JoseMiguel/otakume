@@ -17,7 +17,7 @@ futures==2.2.0
 gspread==0.2.2
 html2text==2014.7.3
 html5lib==0.999
-httplib2==0.8
+httplib2==0.19.0
 ipython==2.1.0
 lockfile==0.8
 lucene-querybuilder==0.2
