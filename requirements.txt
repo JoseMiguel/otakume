@@ -3,7 +3,7 @@ Jinja2==2.7.3
 MarkupSafe==0.23
 Pillow==2.3.0
 PyYAML==3.11
-Pygments==1.6
+Pygments==2.7.4
 Sphinx==1.2.2
 argparse==1.2.1
 backports.ssl-match-hostname==3.4.0.2
