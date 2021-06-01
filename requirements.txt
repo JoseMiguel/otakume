@@ -46,6 +46,6 @@ roman==2.0.0
 simplejson==3.6.3
 six==1.5.2
 tornado==4.0
-urllib3==1.7.1
+urllib3==1.26.5
 vcrpy==1.1.0
 wsgiref==0.1.2
