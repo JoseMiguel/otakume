@@ -18,7 +18,7 @@ gspread==0.2.2
 html2text==2014.7.3
 html5lib==0.999
 httplib2==0.8
-ipython==2.1.0
+ipython==7.16.3
 lockfile==0.8
 lucene-querybuilder==0.2
 lxml==3.3.3
