@@ -23,7 +23,7 @@ lockfile==0.8
 lucene-querybuilder==0.2
 lxml==3.3.3
 mock==1.0.1
-numpy==1.8.1
+numpy==1.21.0
 oauthlib==0.6.1
 pandas==0.14.1
 pexpect==3.1
