@@ -40,7 +40,7 @@ pytz==2014.4
 pyxdg==0.25
 pyzmq==14.3.1
 reportlab==3.0
-requests==2.2.1
+requests==2.20.0
 requests-futures==0.9.4
 roman==2.0.0
 simplejson==3.6.3
